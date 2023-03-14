@@ -2,4 +2,15 @@ netty:
   default:
     allocator:
       max-order: 3
-consul.client.registration.enabled: true
+
+endpoints:
+  health:
+    enabled: true
+    sensitive: false
+    path: /health
+  info:
+    enabled: true
+    sensitive: false
+    #    会包含调用插件git-commit-id-plugin的git-commit-id:revision命令生成的git.properties文件中的信息
+    path: /info
+

@@ -3,4 +3,10 @@ micronaut:
     name: micronaut_learn
   config-client:
     enabled: true
-consul.client.defaultZone: ${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}
+consul:
+  client:
+    registration:
+      enabled: true
+    config:
+      format: yaml
+    defaultZone: ${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}
